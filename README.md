@@ -27,3 +27,7 @@ Windows:
 ```sh
 bak.exe --input C:\Users\me\AppData\Local\Astro\Saved\Savegames --output D:\backup\Astro\Savegames --interval 10m
 ```
+
+## Installation
+
+Just grab the latest executable for your operating system from the [Releases](https://github.com/zikes/bak/releases).
