@@ -52,7 +52,7 @@ var rootCmd = &cobra.Command{
 					if err := os.MkdirAll(basePath, 0755); err != nil {
 						log.Fatalf("Unable to create output directory: %s", err)
 					}
-					to := filepath.Join(basePath, time.Now().Format("2006-01-02_15:04_")+filepath.Base(from))
+					to := filepath.Join(basePath, time.Now().Format("2006-01-02_15.04_")+filepath.Base(from))
 					log.Printf("Copying from %s to %s\n", from, to)
 					if _, err := copyFile(from, to); err != nil {
 						log.Fatalf("Error copying file: %s", err)
