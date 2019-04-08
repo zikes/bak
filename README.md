@@ -16,3 +16,14 @@ Flags:
       --output string       the path to the directory where files should be backed up to
 ```
 
+## Examples
+
+Linux:
+```sh
+bak --input ~/.dotfiles --output /media/backup/.dotfiles --interval 1h
+```
+
+Windows:
+```sh
+bak.exe --input C:\Users\me\AppData\Local\Astro\Saved\Savegames --output D:\backup\Astro\Savegames --interval 10m
+```
