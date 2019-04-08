@@ -16,6 +16,7 @@ import (
 var Input string
 var Output string
 var Interval time.Duration
+var Version string
 
 var rootCmd = &cobra.Command{
 	Use:   "bak",
@@ -48,7 +49,7 @@ var rootCmd = &cobra.Command{
 					from := event.Path
 					relPath := strings.TrimPrefix(from, input)
 					basePath := filepath.Dir(filepath.Join(output, relPath))
-					if err := os.MkdirAll(basePath, 0777); err != nil {
+					if err := os.MkdirAll(basePath, 0755); err != nil {
 						log.Fatalf("Unable to create output directory: %s", err)
 					}
 					to := filepath.Join(basePath, time.Now().Format("2006-01-02_15:04_")+filepath.Base(from))
